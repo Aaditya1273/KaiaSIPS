@@ -32,26 +32,14 @@ module.exports = {
       url: "http://127.0.0.1:8545",
       chainId: 31337,
     },
-    // Keep Avalanche networks for comparison/migration
-    fuji: {
-      url: "https://api.avax-test.network/ext/bc/C/rpc",
-      chainId: 43113,
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-    },
-    avalanche: {
-      url: "https://api.avax.network/ext/bc/C/rpc",
-      chainId: 43114,
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-    }
+
   },
   etherscan: {
     apiKey: {
       // Kaia block explorer API keys
       kaia: process.env.KAIASCAN_API_KEY || "dummy",
       kairos: process.env.KAIASCAN_API_KEY || "dummy",
-      // Keep Avalanche for reference
-      avalanche: process.env.SNOWTRACE_API_KEY || "dummy",
-      avalancheFujiTestnet: process.env.SNOWTRACE_API_KEY || "dummy",
+
     },
     customChains: [
       {

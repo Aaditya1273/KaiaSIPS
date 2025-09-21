@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-    console.log("🌊 Deploying 3SIPS to Kaia Network...");
+    console.log("🌊 Deploying KaiaSIP to Kaia Network...");
     
     const [deployer] = await ethers.getSigners();
     console.log("Deploying with account:", deployer.address);

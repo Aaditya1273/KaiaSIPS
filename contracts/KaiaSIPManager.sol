@@ -20,9 +20,8 @@ contract KaiaSIPManager is Ownable, ReentrancyGuard, Pausable, AutomationCompati
     IERC20 public immutable kaiaUSDC;
     IERC20 public immutable kaiaDAI;
     
-    // Cross-chain bridge interfaces
-    address public axelarGateway;
-    address public layerZeroEndpoint;
+    // Kaia-native protocol integrations
+    address public kaiaProtocolRegistry;
     
     struct SIPPlan {
         uint256 monthlyAmount;
@@ -70,21 +69,19 @@ contract KaiaSIPManager is Ownable, ReentrancyGuard, Pausable, AutomationCompati
     event AutoDepositExecuted(address indexed user, uint256 amount);
     event RiskAssessmentUpdated(address indexed user, uint8 riskScore, string explanation);
     event YieldVaultAdded(uint256 indexed vaultId, string name, address vaultAddress);
-    event CrossChainDepositReceived(address indexed user, uint256 amount, string sourceChain);
+    event KaiaDepositReceived(address indexed user, uint256 amount, address token);
     event AIActionExecuted(address indexed agent, address indexed user, string action);
     
     constructor(
         address _kaiaUSDT,
         address _kaiaUSDC,
         address _kaiaDAI,
-        address _axelarGateway,
-        address _layerZeroEndpoint
+        address _kaiaProtocolRegistry
     ) Ownable(msg.sender) {
         kaiaUSDT = IERC20(_kaiaUSDT);
         kaiaUSDC = IERC20(_kaiaUSDC);
         kaiaDAI = IERC20(_kaiaDAI);
-        axelarGateway = _axelarGateway;
-        layerZeroEndpoint = _layerZeroEndpoint;
+        kaiaProtocolRegistry = _kaiaProtocolRegistry;
     }
 
     modifier onlyAIAgent() {

@@ -1,23 +1,24 @@
 {
-  "name": "sip-agent",
-  "description": "AI-powered Web3 SIP Manager with cross-chain capabilities",
+  "name": "kaiasip",
+  "description": "KaiaSIP - AI-powered DeFi SIP platform on Kaia blockchain",
   "version": "0.1.0",
   "type": "module",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
-    "web3",
+    "kaia",
     "sip",
-    "avalanche",
-    "chainlink",
-    "elizaos",
-    "ictt",
-    "defi"
+    "defi",
+    "ai",
+    "stablecoin",
+    "yield-farming",
+    "web3",
+    "blockchain"
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/your-username/kaiasip.git"
   },
   "exports": {
     "./package.json": "./package.json",
@@ -43,7 +44,15 @@
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^4.1.10",
-    "zod": "3.24.2"
+    "zod": "3.24.2",
+    "@axelar-network/axelarjs-sdk": "^0.13.8",
+    "@layerzerolabs/lz-sdk": "^2.3.3",
+    "web3auth": "^4.7.1",
+    "hardhat": "^2.19.4",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "@chainlink/contracts": "^0.8.0",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -61,21 +70,21 @@
     "lint": "prettier --write ./src",
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch",
-    "test:component": "bun run test:install && bun test",
-    "test:e2e": "bun run test:install && bun test",
-    "test": "bun run test:install && bun run test:component && bun run test:e2e",
-    "test:coverage": "bun run test:install && bun test --coverage",
-    "test:watch": "bun run test:install && bun test --watch",
+    "test:component": "npm run test:install && npm test",
+    "test:e2e": "npm run test:install && npm test",
+    "test": "npm run test:install && npm run test:component && npm run test:e2e",
+    "test:coverage": "npm run test:install && npm test -- --coverage",
+    "test:watch": "npm run test:install && npm test -- --watch",
     "test:install": "node scripts/install-test-deps.js",
     "format": "prettier --write ./src",
     "format:check": "prettier --check ./src",
-    "check-all": "bun run type-check && bun run format:check && bun run test",
-    "cy:open": "bun run test:install && cypress open",
-    "cy:run": "bun run test:install && cypress run --component",
-    "cy:test": "bun run test:install && cypress run --component --reporter spec",
-    "cypress:component": "bun run test:install && cypress run --component",
-    "cypress:e2e": "bun run test:install && cypress run --e2e",
-    "cypress:open": "bun run test:install && cypress open"
+    "check-all": "npm run type-check && npm run format:check && npm run test",
+    "cy:open": "npm run test:install && cypress open",
+    "cy:run": "npm run test:install && cypress run --component",
+    "cy:test": "npm run test:install && cypress run --component --reporter spec",
+    "cypress:component": "npm run test:install && cypress run --component",
+    "cypress:e2e": "npm run test:install && cypress run --e2e",
+    "cypress:open": "npm run test:install && cypress open"
   },
   "publishConfig": {
     "access": "public"

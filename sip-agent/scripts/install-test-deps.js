@@ -37,7 +37,7 @@ function installTestDependencies() {
 
   console.log('Installing test dependencies...');
   try {
-    execSync(`bun add -d ${missingDeps.join(' ')}`, {
+    execSync(`npm install -D ${missingDeps.join(' ')}`, {
       stdio: 'inherit',
       cwd: process.cwd(),
     });

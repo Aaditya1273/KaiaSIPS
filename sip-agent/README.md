@@ -34,7 +34,7 @@ elizaos dev
 # OR start without hot-reloading
 elizaos start
 # Note: When using 'start', you need to rebuild after changes:
-# bun run build
+# npm run build
 
 # Test the project
 elizaos test

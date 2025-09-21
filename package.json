@@ -1,0 +1,52 @@
+{
+  "name": "kaiasip",
+  "version": "2.0.0",
+  "description": "KaiaSIP - AI-powered DeFi SIP platform built natively for Kaia blockchain",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd sip-agent && npm install",
+    "build": "cd sip-agent && npm run build",
+    "dev": "cd sip-agent && npm run dev",
+    "start": "cd sip-agent && npm run start",
+    "test": "cd sip-agent && npm run test",
+    "deploy:kaia-testnet": "npx hardhat run scripts/deploy-kaia.js --network kairos",
+    "deploy:kaia-mainnet": "npx hardhat run scripts/deploy-kaia.js --network kaia",
+    "verify:kaia": "npx hardhat verify --network kaia",
+    "compile": "npx hardhat compile",
+    "clean": "npx hardhat clean",
+    "node": "npx hardhat node",
+    "lint": "cd sip-agent && npm run lint",
+    "format": "cd sip-agent && npm run format"
+  },
+  "keywords": [
+    "kaia",
+    "defi",
+    "sip",
+    "ai",
+    "blockchain",
+    "stablecoin",
+    "yield-farming",
+    "web3",
+    "dapp"
+  ],
+  "author": "KaiaSIP Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/kaiasip.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "hardhat": "^2.19.4",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "@chainlink/contracts": "^0.8.0",
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "ethers": "^6.8.0"
+  }
+}
