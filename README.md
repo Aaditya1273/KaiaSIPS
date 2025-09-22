@@ -1,4 +1,4 @@
-# 🌊 KaiaSIP - AI-Powered DeFi Investment Platform
+# 🌊 KaiaSIP - AI-Powered DeFi Investment Platform:
 *Next-Generation Autonomous Investment Platform Built for Kaia Blockchain*
 
 ![KaiaSIP Platform](https://via.placeholder.com/800x400/1E40AF/FFFFFF?text=KaiaSIP+Native+on+Kaia)
